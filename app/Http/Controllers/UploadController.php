@@ -20,7 +20,7 @@ class UploadController extends Controller
             'kelas' => 'required|string|max:50',
             'mapel' => 'required|string|max:50',
             'judul' => 'nullable|string|max:255',
-            'file'  => 'required|file|mimes:pdf,doc,docx,ppt,pptx,jpg,jpeg,png|max:10240',
+            'file'  => 'required|file|mimes:pdf,doc,docx,ppt,pptx,jpg,jpeg,png,heic,heif,webp,dng,raw,bmp,tiff|max:51200',
         ]);
 
         $file = $request->file('file');

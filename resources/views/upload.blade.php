@@ -122,7 +122,7 @@
                                     <label for="file-input" class="inline-flex items-center justify-center bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl cursor-pointer transition duration-300 shadow-md hover:shadow-lg">
                                         <i class="fas fa-folder-open mr-2"></i> Pilih File
                                     </label>
-                                    <p class="text-gray-500 text-sm mt-4">Format yang didukung: PDF, DOC, DOCX, PPT, PPTX, JPG, PNG (Maks. 10MB)</p>
+                                    <p class="text-gray-500 text-sm mt-4">Format yang didukung: PDF, DOC, DOCX, PPT, PPTX, JPG, PNG (Maks. 50MB)</p>
                                 </div>
                                 
                                 <!-- File info preview -->
@@ -296,12 +296,12 @@
                     const file = files[0];
                     const fileSizeMB = (file.size / (1024 * 1024)).toFixed(2);
                     
-                    // Validasi ukuran file (max 10MB)
-                    if (file.size > 10 * 1024 * 1024) {
+                    // Validasi ukuran file (max 50MB)
+                    if (file.size > 50 * 1024 * 1024) {
                         Swal.fire({
                             icon: 'warning',
                             title: 'File Terlalu Besar',
-                            text: 'Ukuran file maksimal 10MB',
+                            text: 'Ukuran file maksimal 50MB',
                             confirmButtonColor: '#f59e0b'
                         });
                         return;
